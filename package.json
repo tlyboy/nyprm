@@ -1,0 +1,22 @@
+{
+  "name": "nyprm",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "nyprm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "yarn",
+    "pnpm",
+    "nyprm"
+  ],
+  "author": "Guany",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "commander": "^9.0.0"
+  }
+}

@@ -1,2 +1,3 @@
 # nyprm
-A NPM YARN PNPM registry manager.
+
+NPM YARN PNPM registry manager.
