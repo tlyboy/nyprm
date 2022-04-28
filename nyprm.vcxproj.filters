@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
+    <ClCompile Include="nypym.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
