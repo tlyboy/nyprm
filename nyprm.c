@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
         {
             if (strcmp(argv[2], "npm") == 0)
             {
-                system("npm config set registry https://registry.npmjs.org");
+                system("npm config set registry https://registry.npmjs.org/");
             }
             else if (strcmp(argv[2], "yarn") == 0)
             {
