@@ -18,44 +18,44 @@
 
 ### init
 
+同时为 npm yarn pnpm 添加镜像并自动更新或安装
+
 ```bash
 nyprm init
 ```
 
-同时为 npm yarn pnpm 添加镜像并自动更新或安装
+为 npm 或 yarn 添加镜像并自动更新或安装
 
 ```bash
 nyprm init npm # yarn
 ```
 
-为 npm 添加镜像并自动更新或安装
-
 ### add
+
+同时为 npm yarn pnpm 添加镜像
 
 ```bash
 nyprm add
 ```
 
-同时为 npm yarn pnpm 添加镜像
+为 npm 或 yarn 添加镜像
 
 ```bash
 nyprm add npm # yarn
 ```
-
-为 npm 或 yarn 添加镜像
 
 > 注：pnpm 使用 npm 的镜像
 
 ### rm
 
+同时为 npm yarn pnpm 去除镜像
+
 ```bash
 nyprm rm
 ```
 
-同时为 npm yarn pnpm 去除镜像
+为 npm 或 yarn 去除镜像
 
 ```bash
 nyprm add npm # yarn
 ```
-
-为 npm 或 yarn 去除镜像
