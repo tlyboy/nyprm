@@ -24,10 +24,10 @@
 nyprm init
 ```
 
-为 npm 或 yarn 添加镜像并自动更新或安装
+为 npm 或 yarn 或 pnpm 添加镜像并自动更新或安装
 
 ```bash
-nyprm init npm # yarn
+nyprm init npm # yarn | pnpm
 ```
 
 ### add
