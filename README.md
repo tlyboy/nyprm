@@ -57,5 +57,5 @@ nyprm rm
 为 npm 或 yarn 去除镜像
 
 ```bash
-nyprm add npm # yarn
+nyprm rm npm # yarn
 ```
