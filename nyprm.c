@@ -26,8 +26,8 @@ int main(int argc, char *argv[])
 
             system("npm config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/");
             system("npm config set ELECTRON_BUILDER_BINARIES_MIRROR https://npmmirror.com/mirrors/electron-builder-binaries/");
-            system("yan config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/");
-            system("yan config set ELECTRON_BUILDER_BINARIES_MIRROR https://npmmirror.com/mirrors/electron-builder-binaries/");
+            system("yarn config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/");
+            system("yarn config set ELECTRON_BUILDER_BINARIES_MIRROR https://npmmirror.com/mirrors/electron-builder-binaries/");
         }
         else if (strcmp(argv[1], "add") == 0)
         {
@@ -65,8 +65,8 @@ int main(int argc, char *argv[])
 
                 system("npm config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/");
                 system("npm config set ELECTRON_BUILDER_BINARIES_MIRROR https://npmmirror.com/mirrors/electron-builder-binaries/");
-                system("yan config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/");
-                system("yan config set ELECTRON_BUILDER_BINARIES_MIRROR https://npmmirror.com/mirrors/electron-builder-binaries/");
+                system("yarn config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/");
+                system("yarn config set ELECTRON_BUILDER_BINARIES_MIRROR https://npmmirror.com/mirrors/electron-builder-binaries/");
             }
             else if (strcmp(argv[2], "pnpm") == 0)
             {
