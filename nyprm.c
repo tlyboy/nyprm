@@ -22,10 +22,6 @@ int main(int argc, char* argv[])
 
 			system("npm i -g npm yarn pnpm");
 
-			system("yarn config set -- --emoji true");
-			
-			system("yarn config set registry https://registry.npmmirror.com/");
-
 			system("npm config set NODEJS_ORG_MIRROR https://cdn.npmmirror.com/binaries/node");
 			system("npm config set NVM_NODEJS_ORG_MIRROR https://cdn.npmmirror.com/binaries/node");
 			system("npm config set PHANTOMJS_CDNURL https://cdn.npmmirror.com/binaries/phantomjs");
@@ -45,6 +41,10 @@ int main(int argc, char* argv[])
 			system("npm config set npm_config_sharp_binary_host https://cdn.npmmirror.com/binaries/sharp");
 			system("npm config set npm_config_sharp_libvips_binary_host https://cdn.npmmirror.com/binaries/sharp-libvips");
 			system("npm config set npm_config_robotjs_binary_host https://cdn.npmmirror.com/binaries/robotjs");
+
+			system("yarn config set -- --emoji true");
+
+			system("yarn config set registry https://registry.npmmirror.com/");
 
 			system("yarn config set NODEJS_ORG_MIRROR https://cdn.npmmirror.com/binaries/node");
 			system("yarn config set NVM_NODEJS_ORG_MIRROR https://cdn.npmmirror.com/binaries/node");
