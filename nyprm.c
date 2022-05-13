@@ -22,6 +22,8 @@ int main(int argc, char* argv[])
 
 			system("npm i -g npm yarn pnpm");
 
+			system("yarn config set -- --emoji true");
+			
 			system("yarn config set registry https://registry.npmmirror.com/");
 
 			system("npm config set NODEJS_ORG_MIRROR https://cdn.npmmirror.com/binaries/node");
@@ -63,8 +65,6 @@ int main(int argc, char* argv[])
 			system("yarn config set npm_config_sharp_binary_host https://cdn.npmmirror.com/binaries/sharp");
 			system("yarn config set npm_config_sharp_libvips_binary_host https://cdn.npmmirror.com/binaries/sharp-libvips");
 			system("yarn config set npm_config_robotjs_binary_host https://cdn.npmmirror.com/binaries/robotjs");
-		
-			system("yarn config set -- --emoji true");
 		}
 		else if (strcmp(argv[1], "add") == 0)
 		{
