@@ -9,9 +9,9 @@ int main(int argc, char* argv[])
 		printf("Usage: nyprm <command>\n");
 		printf("\n");
 		printf("Commands:\n");
-		printf("  init  [options] [npm|yarn|pnpm]  add mirror and auto update or install\n");
-		printf("  add   [options] [npm|yarn]       add mirror\n");
-		printf("  rm    [options] [npm|yarn]       remove mirror\n");
+		printf("  init  add mirror and auto update or install\n");
+		printf("  add   add mirror\n");
+		printf("  rm    remove mirror\n");
 		return -1;
 	}
 	else if (argc == 2)
@@ -24,10 +24,47 @@ int main(int argc, char* argv[])
 
 			system("yarn config set registry https://registry.npmmirror.com/");
 
-			system("npm config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/");
-			system("npm config set ELECTRON_BUILDER_BINARIES_MIRROR https://npmmirror.com/mirrors/electron-builder-binaries/");
-			system("yarn config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/");
-			system("yarn config set ELECTRON_BUILDER_BINARIES_MIRROR https://npmmirror.com/mirrors/electron-builder-binaries/");
+			system("npm config set NODEJS_ORG_MIRROR https://cdn.npmmirror.com/binaries/node");
+			system("npm config set NVM_NODEJS_ORG_MIRROR https://cdn.npmmirror.com/binaries/node");
+			system("npm config set PHANTOMJS_CDNURL https://cdn.npmmirror.com/binaries/phantomjs");
+			system("npm config set CHROMEDRIVER_CDNURL https://cdn.npmmirror.com/binaries/chromedriver");
+			system("npm config set OPERADRIVER_CDNURL https://cdn.npmmirror.com/binaries/operadriver");
+			system("npm config set ELECTRON_MIRROR https://cdn.npmmirror.com/binaries/electron/");
+			system("npm config set ELECTRON_BUILDER_BINARIES_MIRROR https://cdn.npmmirror.com/binaries/electron-builder-binaries/");
+			system("npm config set SASS_BINARY_SITE https://cdn.npmmirror.com/binaries/node-sass");
+			system("npm config set SWC_BINARY_SITE https://cdn.npmmirror.com/binaries/node-swc");
+			system("npm config set NWJS_URLBASE https://cdn.npmmirror.com/binaries/nwjs/v");
+			system("npm config set PUPPETEER_DOWNLOAD_HOST https://cdn.npmmirror.com/binaries");
+			system("npm config set SENTRYCLI_CDNURL https://cdn.npmmirror.com/binaries/sentry-cli");
+			system("npm config set SAUCECTL_INSTALL_BINARY_MIRROR https://cdn.npmmirror.com/binaries/saucectl");
+			system("npm config set RE2_DOWNLOAD_MIRROR https://cdn.npmmirror.com/binaries/node-re2");
+			system("npm config set RE2_DOWNLOAD_SKIP_PATH true");
+			system("npm config set npm_config_keytar_binary_host https://cdn.npmmirror.com/binaries/keytar");
+			system("npm config set npm_config_sharp_binary_host https://cdn.npmmirror.com/binaries/sharp");
+			system("npm config set npm_config_sharp_libvips_binary_host https://cdn.npmmirror.com/binaries/sharp-libvips");
+			system("npm config set npm_config_robotjs_binary_host https://cdn.npmmirror.com/binaries/robotjs");
+
+			system("yarn config set NODEJS_ORG_MIRROR https://cdn.npmmirror.com/binaries/node");
+			system("yarn config set NVM_NODEJS_ORG_MIRROR https://cdn.npmmirror.com/binaries/node");
+			system("yarn config set PHANTOMJS_CDNURL https://cdn.npmmirror.com/binaries/phantomjs");
+			system("yarn config set CHROMEDRIVER_CDNURL https://cdn.npmmirror.com/binaries/chromedriver");
+			system("yarn config set OPERADRIVER_CDNURL https://cdn.npmmirror.com/binaries/operadriver");
+			system("yarn config set ELECTRON_MIRROR https://cdn.npmmirror.com/binaries/electron/");
+			system("yarn config set ELECTRON_BUILDER_BINARIES_MIRROR https://cdn.npmmirror.com/binaries/electron-builder-binaries/");
+			system("yarn config set SASS_BINARY_SITE https://cdn.npmmirror.com/binaries/node-sass");
+			system("yarn config set SWC_BINARY_SITE https://cdn.npmmirror.com/binaries/node-swc");
+			system("yarn config set NWJS_URLBASE https://cdn.npmmirror.com/binaries/nwjs/v");
+			system("yarn config set PUPPETEER_DOWNLOAD_HOST https://cdn.npmmirror.com/binaries");
+			system("yarn config set SENTRYCLI_CDNURL https://cdn.npmmirror.com/binaries/sentry-cli");
+			system("yarn config set SAUCECTL_INSTALL_BINARY_MIRROR https://cdn.npmmirror.com/binaries/saucectl");
+			system("yarn config set RE2_DOWNLOAD_MIRROR https://cdn.npmmirror.com/binaries/node-re2");
+			system("yarn config set RE2_DOWNLOAD_SKIP_PATH true");
+			system("yarn config set npm_config_keytar_binary_host https://cdn.npmmirror.com/binaries/keytar");
+			system("yarn config set npm_config_sharp_binary_host https://cdn.npmmirror.com/binaries/sharp");
+			system("yarn config set npm_config_sharp_libvips_binary_host https://cdn.npmmirror.com/binaries/sharp-libvips");
+			system("yarn config set npm_config_robotjs_binary_host https://cdn.npmmirror.com/binaries/robotjs");
+		
+			system("yarn config set -- --emoji true");
 		}
 		else if (strcmp(argv[1], "add") == 0)
 		{
@@ -38,79 +75,6 @@ int main(int argc, char* argv[])
 		{
 			system("npm config set registry https://registry.npmjs.org");
 			system("yarn config set registry https://registry.yarnpkg.com/");
-		}
-		else
-		{
-			return -1;
-		}
-	}
-	else if (argc == 3)
-	{
-		if (strcmp(argv[1], "init") == 0)
-		{
-			if (strcmp(argv[2], "npm") == 0)
-			{
-				system("npm config set registry https://registry.npmmirror.com/");
-
-				system("npm i -g npm");
-
-				system("npm config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/");
-				system("npm config set ELECTRON_BUILDER_BINARIES_MIRROR https://npmmirror.com/mirrors/electron-builder-binaries/");
-			}
-			else if (strcmp(argv[2], "yarn") == 0)
-			{
-				system("npm config set registry https://registry.npmmirror.com/");
-
-				system("npm i -g npm yarn");
-
-				system("npm config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/");
-				system("npm config set ELECTRON_BUILDER_BINARIES_MIRROR https://npmmirror.com/mirrors/electron-builder-binaries/");
-				system("yarn config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/");
-				system("yarn config set ELECTRON_BUILDER_BINARIES_MIRROR https://npmmirror.com/mirrors/electron-builder-binaries/");
-			}
-			else if (strcmp(argv[2], "pnpm") == 0)
-			{
-				system("npm config set registry https://registry.npmmirror.com/");
-
-				system("npm i -g npm pnpm");
-
-				system("npm config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/");
-				system("npm config set ELECTRON_BUILDER_BINARIES_MIRROR https://npmmirror.com/mirrors/electron-builder-binaries/");
-			}
-			else
-			{
-				return -1;
-			}
-		}
-		else if (strcmp(argv[1], "add") == 0)
-		{
-			if (strcmp(argv[2], "npm") == 0)
-			{
-				system("npm config set registry https://registry.npmmirror.com/");
-			}
-			else if (strcmp(argv[2], "yarn") == 0)
-			{
-				system("yarn config set registry https://registry.npmmirror.com/");
-			}
-			else
-			{
-				return -1;
-			}
-		}
-		else if (strcmp(argv[1], "rm") == 0)
-		{
-			if (strcmp(argv[2], "npm") == 0)
-			{
-				system("npm config set registry https://registry.npmjs.org/");
-			}
-			else if (strcmp(argv[2], "yarn") == 0)
-			{
-				system("yarn config set registry https://registry.yarnpkg.com/");
-			}
-			else
-			{
-				return -1;
-			}
 		}
 		else
 		{
