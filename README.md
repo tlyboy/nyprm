@@ -1,22 +1,20 @@
 # nyprm
 
+![nyprm](nyprm.png)
+
 一个 npm yarn pnpm 的镜像切换工具
 
-## 特别说明
+## 安装
 
-不同于其他工具的逻辑
+```bash
+npm i -g nyprm --registry=https://registry.npmmirror.com
+```
 
-该工具的镜像站只有 [npmmirror 中国镜像站](https://npmmirror.com/)
-
-## 如何使用
-
-添加到用户环境变量中，或者使用终端工具运行。
-
-![nyprm](nyprm.png)
+## 使用
 
 ### init
 
-同时为 npm yarn pnpm 以及二进制添加镜像并自动更新或安装
+同时为 npm yarn pnpm 以及二进制文件添加镜像并自动更新或安装
 
 ```bash
 nyprm init
@@ -37,3 +35,13 @@ nyprm add
 ```bash
 nyprm rm
 ```
+
+## 特别说明
+
+不同于其他工具的逻辑
+
+该工具的镜像站只有 [npmmirror 中国镜像站](https://npmmirror.com/)
+
+## 许可协议
+
+[MIT](./LICENSE)
