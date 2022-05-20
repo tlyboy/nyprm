@@ -1,5 +1,3 @@
-![nyprm](./nyprm.png)
-
 # nyprm
 
 一个 npm yarn pnpm 的镜像切换工具
@@ -11,6 +9,8 @@ npm i -g nyprm --registry=https://registry.npmmirror.com
 ```
 
 ## 使用说明
+
+![nyprm](./nyprm.png)
 
 ### init
 
