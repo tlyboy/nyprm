@@ -1,6 +1,6 @@
 {
   "name": "nyprm",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "🛠️ NPM YARN PNPM registry manager",
   "keywords": [
     "npm",
