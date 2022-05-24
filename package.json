@@ -1,13 +1,24 @@
 {
   "name": "nyprm",
-  "version": "1.0.1",
-  "description": "NPM YARN PNPM registry manager",
+  "version": "1.0.2",
+  "description": "🛠️ NPM YARN PNPM registry manager",
+  "keywords": [
+    "npm",
+    "yarn",
+    "pnpm",
+    "nyprm"
+  ],
+  "homepage": "https://github.com/tlyboy/nyprm#readme",
+  "bugs": {
+    "url": "https://github.com/tlyboy/nyprm/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlyboy/nyprm.git"
+  },
   "license": "MIT",
   "author": "Guany",
-  "main": "index.js",
-  "bin": {
-    "nyprm": "./index.js"
-  },
+  "bin": "./cli.js",
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^9.2.0"

@@ -10,7 +10,7 @@ npm i -g nyprm --registry=https://registry.npmmirror.com
 
 ## 使用说明
 
-![nyprm](./nyprm.png)
+![nyprm](nyprm.png)
 
 ### init
 
@@ -44,4 +44,4 @@ nyprm rm
 
 ## 使用许可
 
-[MIT](./LICENSE) © Guany
+[MIT](LICENSE) © Guany
