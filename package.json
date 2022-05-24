@@ -1,6 +1,6 @@
 {
   "name": "nyprm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NPM YARN PNPM registry manager",
   "license": "MIT",
   "author": "Guany",
