@@ -44,4 +44,4 @@ nyprm rm
 
 ## 使用许可
 
-[MIT](https://github.com/tlyboy/nyprm/blob/HEAD/LICENSE) © Guany
+[MIT](https://github.com/tlyboy/nyprm/blob/main/LICENSE) © Guany
