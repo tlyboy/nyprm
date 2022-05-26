@@ -1,7 +1,7 @@
 {
   "name": "nyprm",
-  "version": "1.0.5",
-  "description": "🛠️ NPM YARN PNPM registry manager",
+  "version": "1.0.6",
+  "description": "🛠️ NPM YARN PNPM 镜像管理工具",
   "keywords": [
     "npm",
     "yarn",
@@ -12,7 +12,7 @@
   "bugs": "https://github.com/tlyboy/nyprm/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tlyboy/nyprm.git"
+    "url": "git+https://github.com/tlyboy/nyprm.git"
   },
   "license": "MIT",
   "author": "Guany",

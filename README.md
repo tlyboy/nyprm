@@ -1,6 +1,6 @@
 # nyprm
 
-一个 npm yarn pnpm 的镜像切换工具。
+一个 npm yarn pnpm 的镜像管理工具。
 
 ## 安装
 
