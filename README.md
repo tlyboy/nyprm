@@ -11,10 +11,9 @@ npm i -g nyprm --registry=https://registry.npmmirror.com
 ## 使用说明
 
 <p align="center">
-  <img
-    src="https://cdn.jsdelivr.net/gh/tlyboy/assets/img/image-20220526201009962.png"
-    alt="nyprm"
-  />
+  <a href="https://cdn.jsdelivr.net/gh/tlyboy/assets/img/image-20220526201009962.png" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn.jsdelivr.net/gh/tlyboy/assets/img/image-20220526201009962.png" alt="nyprm" />
+  </a>
 </p>
 
 ### init
