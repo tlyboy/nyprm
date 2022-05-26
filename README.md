@@ -10,7 +10,12 @@ npm i -g nyprm --registry=https://registry.npmmirror.com
 
 ## 使用说明
 
-![nyprm](https://raw.githubusercontent.com/tlyboy/nyprm/main/nyprm.png)
+<p align="center">
+  <img
+    src="https://cdn.jsdelivr.net/gh/tlyboy/assets/img/image-20220526201009962.png"
+    alt="nyprm"
+  />
+</p>
 
 ### init
 
