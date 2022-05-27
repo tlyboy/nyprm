@@ -5,7 +5,7 @@ import { Command } from 'commander/esm.mjs'
 import chalk from 'chalk'
 import { execSync } from 'child_process'
 
-const packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf8'))
+const packageJson = JSON.parse(fs.readFileSync(new URL('./package.json', import.meta.url)))
 const name = packageJson.name
 const version = packageJson.version
 
