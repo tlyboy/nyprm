@@ -32,13 +32,15 @@ nyprm init
 nyprm add
 ```
 
-### rm
+### remove
 
 同时为 npm yarn pnpm 去除镜像。
 
 ```bash
-nyprm rm
+nyprm remove
 ```
+
+别名：rm
 
 ## 特别说明
 
