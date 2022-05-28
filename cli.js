@@ -6,8 +6,7 @@ import chalk from 'chalk'
 import { execSync } from 'child_process'
 
 const packageJson = JSON.parse(fs.readFileSync(new URL('./package.json', import.meta.url)))
-const name = packageJson.name
-const version = packageJson.version
+const { name, version } = packageJson
 
 const program = new Command()
 
@@ -75,7 +74,8 @@ program
   })
 
 program
-  .command('rm')
+  .command('remove')
+  .alias('rm')
   .description('remove mirror')
   .action(() => {
     execSync('npm config set registry https://registry.npmjs.org', { stdio: 'inherit' })
