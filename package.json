@@ -1,6 +1,6 @@
 {
   "name": "nyprm",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "🛠️ NPM YARN PNPM 镜像管理工具",
   "keywords": [
     "npm",
@@ -19,8 +19,10 @@
   "type": "module",
   "bin": "./cli.js",
   "dependencies": {
-    "@types/node": "^17.0.35",
     "chalk": "^5.0.1",
-    "commander": "^9.2.0"
+    "commander": "^9.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.36"
   }
 }
