@@ -1,6 +1,6 @@
 {
   "name": "nyprm",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "🛠️ NPM YARN PNPM 镜像管理工具",
   "keywords": [
     "npm",
