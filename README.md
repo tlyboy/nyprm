@@ -10,11 +10,22 @@ npm install -g nyprm --registry=https://registry.npmmirror.com
 
 ## 使用说明
 
-<p align="center">
-  <a href="https://raw.githubusercontent.com/tlyboy/nyprm/main/nyprm.png" target="_blank" rel="noopener noreferrer">
-    <img src="https://raw.githubusercontent.com/tlyboy/nyprm/main/nyprm.png" alt="nyprm" />
-  </a>
-</p>
+```text
+Usage: nyprm [options] [command]
+
+🛠️  NPM YARN PNPM registry manager
+
+Options:
+  -V, --version   output the version number
+  -h, --help      display help for command
+
+Commands:
+  init            add mirror and auto update or install
+  add             add mirror
+  remove|rm       remove mirror
+  list|ls         show registry list
+  help [command]  display help for command
+```
 
 ### init
 
@@ -41,6 +52,16 @@ nyprm remove
 ```
 
 别名：rm
+
+### list
+
+列出 npm yarn pnpm 当前镜像。
+
+```bash
+nyprm list
+```
+
+别名：ls
 
 ## 特别说明
 

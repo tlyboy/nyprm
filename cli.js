@@ -82,4 +82,14 @@ program
     execSync('yarn config set registry https://registry.yarnpkg.com/', { stdio: 'inherit' })
   })
 
+program
+  .command('list')
+  .alias('ls')
+  .description('show registry list')
+  .action(() => {
+    console.log(`${chalk.red('npm')}:`, chalk.green(execSync('npm config get registry').toString().trim()))
+    console.log(`${chalk.blue('yarn')}:`, chalk.green(execSync('yarn config get registry').toString().trim()))
+    console.log(`${chalk.yellow('pnpm')}:`, chalk.green(execSync('pnpm config get registry').toString().trim()))
+  })
+
 program.parse()
