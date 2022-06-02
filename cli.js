@@ -17,7 +17,7 @@ program
 
 program
   .command('init')
-  .description('add mirror and auto update or install')
+  .description('add registry mirror and binary mirror')
   .action(() => {
     execSync('npm config set registry https://registry.npmmirror.com/', { stdio: 'inherit' })
     execSync('npm config set NODEJS_ORG_MIRROR https://cdn.npmmirror.com/binaries/node', { stdio: 'inherit' })
@@ -67,19 +67,19 @@ program
 
 program
   .command('add')
-  .description('add mirror')
+  .description('add registry mirror')
   .action(() => {
-    execSync('npm config set registry https://registry.npmmirror.com/', { stdio: 'inherit' })
-    execSync('yarn config set registry https://registry.npmmirror.com/', { stdio: 'inherit' })
+    execSync('npm config set registry https://registry.npmmirror.com', { stdio: 'inherit' })
+    execSync('yarn config set registry https://registry.npmmirror.com', { stdio: 'inherit' })
   })
 
 program
   .command('remove')
   .alias('rm')
-  .description('remove mirror')
+  .description('remove registry mirror')
   .action(() => {
-    execSync('npm config set registry https://registry.npmjs.org', { stdio: 'inherit' })
-    execSync('yarn config set registry https://registry.yarnpkg.com/', { stdio: 'inherit' })
+    execSync('npm config set registry https://registry.npmjs.org/', { stdio: 'inherit' })
+    execSync('yarn config set registry https://registry.yarnpkg.com', { stdio: 'inherit' })
   })
 
 program

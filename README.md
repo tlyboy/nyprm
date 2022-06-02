@@ -20,16 +20,16 @@ Options:
   -h, --help      display help for command
 
 Commands:
-  init            add mirror and auto update or install
-  add             add mirror
-  remove|rm       remove mirror
+  init            add registry mirror and binary mirror
+  add             add registry mirror
+  remove|rm       remove registry mirror
   list|ls         show registry list
   help [command]  display help for command
 ```
 
 ### init
 
-同时为 npm yarn pnpm 以及二进制文件添加镜像并自动更新或安装。
+为 npm、yarn、pnpm 和二进制添加镜像。
 
 ```bash
 nyprm init
@@ -37,7 +37,7 @@ nyprm init
 
 ### add
 
-同时为 npm yarn pnpm 添加镜像。
+为 npm、yarn 和 pnpm 添加镜像。
 
 ```bash
 nyprm add
@@ -45,7 +45,7 @@ nyprm add
 
 ### remove
 
-同时为 npm yarn pnpm 去除镜像。
+为 npm、yarn 和 pnpm 移除镜像。
 
 ```bash
 nyprm remove
@@ -55,7 +55,7 @@ nyprm remove
 
 ### list
 
-列出 npm yarn pnpm 当前镜像。
+显示 npm、yarn 和 pnpm 镜像列表。
 
 ```bash
 nyprm list
