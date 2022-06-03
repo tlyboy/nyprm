@@ -63,11 +63,13 @@ nyprm list
 
 别名：ls
 
-## 特别说明
+## 相关仓库
 
-不同于其他工具的逻辑。
-
-该工具的镜像站只有 [npmmirror 中国镜像站](https://npmmirror.com/)。
+- [npm](https://github.com/npm/cli) — the package manager for JavaScript
+- [yarn](https://github.com/yarnpkg/yarn) — Fast, reliable, and secure dependency management
+- [pnpm](https://github.com/pnpm/pnpm) — Fast, disk space efficient package manager
+- [cnpm](https://github.com/cnpm/cnpm) — npm client for China mirror of npm
+- [binary-mirror-config](https://github.com/cnpm/binary-mirror-config) — Binary mirror config for prebuild and node-pre-gyp
 
 ## 使用许可
 
