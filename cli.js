@@ -69,8 +69,8 @@ program
   .command('add')
   .description('add registry mirror')
   .action(() => {
-    execSync('npm config set registry https://registry.npmmirror.com', { stdio: 'inherit' })
-    execSync('yarn config set registry https://registry.npmmirror.com', { stdio: 'inherit' })
+    execSync('npm config set registry https://registry.npmmirror.com/', { stdio: 'inherit' })
+    execSync('yarn config set registry https://registry.npmmirror.com/', { stdio: 'inherit' })
   })
 
 program
@@ -79,7 +79,7 @@ program
   .description('remove registry mirror')
   .action(() => {
     execSync('npm config set registry https://registry.npmjs.org/', { stdio: 'inherit' })
-    execSync('yarn config set registry https://registry.yarnpkg.com', { stdio: 'inherit' })
+    execSync('yarn config set registry https://registry.yarnpkg.com/', { stdio: 'inherit' })
   })
 
 program
