@@ -12,7 +12,7 @@ const program = new Command()
 
 program
   .name(chalk.cyan(name))
-  .description(`🛠️ ${chalk.red('NPM')} ${chalk.blue('YARN')} ${chalk.yellow('PNPM')} ${chalk.green('registry manager')}`)
+  .description(`${chalk.red('NPM')} ${chalk.blue('YARN')} ${chalk.yellow('PNPM')} ${chalk.green('registry manager')}`)
   .version(chalk.magenta(version))
 
 program
@@ -42,7 +42,6 @@ program
 
     execSync('npm install -g npm yarn pnpm', { stdio: 'inherit' })
 
-    execSync('yarn config set -- --emoji true', { stdio: 'inherit' })
     execSync('yarn config set registry https://registry.npmmirror.com/', { stdio: 'inherit' })
     execSync('yarn config set NODEJS_ORG_MIRROR https://cdn.npmmirror.com/binaries/node', { stdio: 'inherit' })
     execSync('yarn config set NVM_NODEJS_ORG_MIRROR https://cdn.npmmirror.com/binaries/node', { stdio: 'inherit' })
