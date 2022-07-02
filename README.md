@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-npm install -g nyprm --registry=https://registry.npmmirror.com
+npm install -g nyprm --registry=https://registry.npmmirror.com/
 ```
 
 ## 使用说明
