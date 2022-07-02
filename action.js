@@ -10,7 +10,7 @@ export function configGet(packageManager, key) {
 }
 
 export function configSetRegistry(packageManager, registryURL) {
-  configSet(packageManager, 'registry', new URL(registryURL).href)
+  configSet(packageManager, 'registry', registryURL)
 }
 
 export function configGetRegistry(packageManager) {
