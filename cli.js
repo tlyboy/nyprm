@@ -4,6 +4,7 @@ import fs from 'fs'
 import { Command } from 'commander'
 import chalk from 'chalk'
 import { execSync } from 'child_process'
+
 import { getPkgManager } from './pkgManager.js'
 import { initConfig, setConfig, getConfig } from './action.js'
 
