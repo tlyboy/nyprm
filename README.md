@@ -10,6 +10,8 @@ npm install -g nyprm --registry=https://registry.npmmirror.com/
 
 ## 使用说明
 
+### 命令行
+
 ```text
 Usage: nyprm [options] [command]
 
@@ -27,7 +29,7 @@ Commands:
   help [command]  display help for command
 ```
 
-### init
+#### init
 
 为 npm、yarn、pnpm 和二进制添加镜像。
 
@@ -35,7 +37,7 @@ Commands:
 nyprm init
 ```
 
-### add
+#### add
 
 为 npm、yarn 和 pnpm 添加镜像。
 
@@ -43,7 +45,7 @@ nyprm init
 nyprm add
 ```
 
-### remove
+#### remove
 
 为 npm、yarn 和 pnpm 移除镜像。
 
@@ -53,7 +55,7 @@ nyprm remove
 
 别名：rm
 
-### list
+#### list
 
 显示 npm、yarn 和 pnpm 镜像列表。
 
@@ -62,6 +64,16 @@ nyprm list
 ```
 
 别名：ls
+
+### 包
+
+```bash
+npm install nyprm
+```
+
+```javascript
+import nyprm from 'nyprm'
+```
 
 ## 相关仓库
 
