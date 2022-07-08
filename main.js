@@ -1,20 +1,20 @@
-import fs from 'fs'
+import { readFileSync } from 'fs'
 import chalk from 'chalk'
 
-import pkgManager from './pkgManager.js'
-import action from './action.js'
+import { getPkgManager } from './pkgManager.js'
+import { init, setConfig, getConfig } from './action.js'
 
-const packageJson = JSON.parse(fs.readFileSync(new URL('./package.json', import.meta.url)))
+const packageJson = JSON.parse(readFileSync(new URL('./package.json', import.meta.url)))
 const { name, version } = packageJson
-
-const { getPkgManager } = pkgManager
 
 export default {
   name: chalk.cyan(name),
-  description: `${getPkgManager('NPM')} ${getPkgManager('YARN')} ${getPkgManager('PNPM')} ${chalk.green(
+  description: `🛠️  ${getPkgManager('NPM')} ${getPkgManager('YARN')} ${getPkgManager('PNPM')} ${chalk.green(
     'registry manager'
   )}`,
   version: chalk.magenta(version),
-  ...pkgManager,
-  ...action
+  getPkgManager,
+  init,
+  setConfig,
+  getConfig
 }

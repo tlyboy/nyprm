@@ -1,27 +1,34 @@
 #!/usr/bin/env node
 
-import fs from 'fs'
+import { readFileSync } from 'fs'
 import { Command } from 'commander'
 import chalk from 'chalk'
 import { execSync } from 'child_process'
 
-import main from './main.js'
+import { getPkgManager } from './pkgManager.js'
+import { init, setConfig, getConfig } from './action.js'
 
-const { name, description, version, getPkgManager, initConfig, setConfig, getConfig } = main
+const packageJson = JSON.parse(readFileSync(new URL('./package.json', import.meta.url)))
+const { name, version } = packageJson
 
 const program = new Command()
 
-program.name(name).description(description).version(version)
+program
+  .name(chalk.cyan(name))
+  .description(
+    `🛠️  ${getPkgManager('NPM')} ${getPkgManager('YARN')} ${getPkgManager('PNPM')} ${chalk.green('registry manager')}`
+  )
+  .version(chalk.magenta(version))
 
 program
   .command('init')
   .description('add registry mirror and binary mirror')
   .action(() => {
-    initConfig('npm')
+    init('npm')
 
     execSync('npm install -g npm yarn pnpm', { stdio: 'inherit' })
 
-    initConfig('yarn')
+    init('yarn')
   })
 
 program
