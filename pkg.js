@@ -10,7 +10,7 @@ const { name, version } = pkgJson
 
 export default {
   name: chalk.cyan(name),
-  description: `🛠️  ${getPkgManager('NPM')} ${getPkgManager('YARN')} ${getPkgManager('PNPM')} ${chalk.green(
+  description: `🛠️ ${getPkgManager('NPM')} ${getPkgManager('YARN')} ${getPkgManager('PNPM')} ${chalk.green(
     'registry manager'
   )}`,
   version: chalk.magenta(version)
