@@ -5,20 +5,17 @@ import { Command } from 'commander'
 import chalk from 'chalk'
 import { execSync } from 'child_process'
 
-import { getPkgManager } from './pkgManager.js'
-import { init, setConfig, getConfig } from './action.js'
+import pkg from './pkg.js'
+import pkgManager from './pkgManager.js'
+import action from './action.js'
 
-const packageJson = JSON.parse(readFileSync(new URL('./package.json', import.meta.url)))
-const { name, version } = packageJson
+const { name, description, version } = pkg
+const { getPkgManager } = pkgManager
+const { init, setConfig, getConfig } = action
 
 const program = new Command()
 
-program
-  .name(chalk.cyan(name))
-  .description(
-    `🛠️  ${getPkgManager('NPM')} ${getPkgManager('YARN')} ${getPkgManager('PNPM')} ${chalk.green('registry manager')}`
-  )
-  .version(chalk.magenta(version))
+program.name(name).description(description).version(version)
 
 program
   .command('init')
