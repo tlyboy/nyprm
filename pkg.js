@@ -5,8 +5,8 @@ import pkgManager from './pkgManager.js'
 
 const { getPkgManager } = pkgManager
 
-const pkgJson = JSON.parse(readFileSync(new URL('./package.json', import.meta.url)))
-const { name, version } = pkgJson
+const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url)))
+const { name, version } = pkg
 
 export default {
   name: chalk.cyan(name),
