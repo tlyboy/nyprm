@@ -1,9 +1,7 @@
-import pkg from './pkg.js'
-import pkgManager from './pkgManager.js'
-import action from './action.js'
+import constants from './constants.js'
+import actions from './actions.js'
 
 export default {
-  ...pkg,
-  ...pkgManager,
-  ...action
+  ...constants,
+  ...actions
 }

@@ -2,15 +2,12 @@
 
 import { Command } from 'commander'
 import chalk from 'chalk'
-import { execSync } from 'child_process'
+import { execaCommandSync } from 'execa'
 
-import pkg from './pkg.js'
-import pkgManager from './pkgManager.js'
-import action from './action.js'
+import constants from './constants.js'
+import actions from './actions.js'
 
-const { name, description, version } = pkg
-const { getPkgManager } = pkgManager
-const { init, setConfig, getConfig } = action
+const { name, description, version, registries } = constants
 
 const program = new Command()
 
@@ -20,19 +17,21 @@ program
   .command('init')
   .description('add registry mirror and binary mirror')
   .action(() => {
-    init('npm')
+    actions.init('npm', registries.npmmirror)
 
-    execSync('npm install -g npm yarn pnpm', { stdio: 'inherit' })
+    execaCommandSync('npm install -g npm yarn pnpm', { stdio: 'inherit' })
 
-    init('yarn')
+    actions.setConfig('yarn', '-- --emoji', 'true')
+
+    actions.init('yarn', registries.npmmirror)
   })
 
 program
   .command('add')
   .description('add registry mirror')
   .action(() => {
-    setConfig('npm', 'registry', 'https://registry.npmmirror.com/')
-    setConfig('yarn', 'registry', 'https://registry.npmmirror.com/')
+    actions.setConfig('npm', 'registry', registries.npmmirror.registry)
+    actions.setConfig('yarn', 'registry', registries.npmmirror.registry)
   })
 
 program
@@ -40,8 +39,8 @@ program
   .alias('rm')
   .description('remove registry mirror')
   .action(() => {
-    setConfig('npm', 'registry', 'https://registry.npmjs.org/')
-    setConfig('yarn', 'registry', 'https://registry.yarnpkg.com/')
+    actions.setConfig('npm', 'registry', registries.npm.registry)
+    actions.setConfig('yarn', 'registry', registries.yarn.registry)
   })
 
 program
@@ -49,9 +48,9 @@ program
   .alias('ls')
   .description('show registry list')
   .action(() => {
-    console.log(`${getPkgManager('npm')}: ${getConfig('npm', 'registry')}`)
-    console.log(`${getPkgManager('yarn')}: ${getConfig('yarn', 'registry')}`)
-    console.log(`${getPkgManager('pnpm')}: ${getConfig('pnpm', 'registry')}`)
+    console.log(`${actions.getPkgManager('npm')}: ${actions.getConfig('npm', 'registry')}`)
+    console.log(`${actions.getPkgManager('yarn')}: ${actions.getConfig('yarn', 'registry')}`)
+    console.log(`${actions.getPkgManager('pnpm')}: ${actions.getConfig('pnpm', 'registry')}`)
   })
 
 program.parse()
