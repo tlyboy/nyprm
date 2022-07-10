@@ -10,7 +10,7 @@ const registries = JSON.parse(readFileSync(new URL('./registries.json', import.m
 
 export default {
   name: chalk.cyan(name),
-  description: `🛠️ ${actions.getPkgManager('NPM')} ${actions.getPkgManager('YARN')} ${actions.getPkgManager(
+  description: `${actions.getPkgManager('NPM')} ${actions.getPkgManager('YARN')} ${actions.getPkgManager(
     'PNPM'
   )} ${chalk.green('registry manager')}`,
   version: chalk.magenta(version),

@@ -13,7 +13,7 @@ npm install -g nyprm --registry=https://registry.npmmirror.com/
 ```text
 Usage: nyprm [options] [command]
 
-🛠️  NPM YARN PNPM registry manager
+NPM YARN PNPM registry manager
 
 Options:
   -V, --version   output the version number
