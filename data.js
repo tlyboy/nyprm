@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs'
 import chalk from 'chalk'
 
-import { getPkgManager } from './actions.js'
+import { getPkgManager } from './methods.js'
 
 const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url)))
 

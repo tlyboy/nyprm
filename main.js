@@ -1,10 +1,10 @@
-import * as constants from './constants.js'
-import * as actions from './actions.js'
+import * as data from './data.js'
+import * as methods from './methods.js'
 
-export * from './constants.js'
-export * from './actions.js'
+export * from './data.js'
+export * from './methods.js'
 
 export default {
-  ...constants,
-  ...actions
+  ...data,
+  ...methods
 }

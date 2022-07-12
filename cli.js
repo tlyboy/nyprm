@@ -4,8 +4,8 @@ import { Command } from 'commander'
 import chalk from 'chalk'
 import { execaCommandSync } from 'execa'
 
-import { name, description, version, registries } from './constants.js'
-import { getPkgManager, init, setConfig, getConfig } from './actions.js'
+import { name, description, version, registries } from './data.js'
+import { getPkgManager, init, setConfig, getConfig } from './methods.js'
 
 const program = new Command()
 
