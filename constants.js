@@ -1,18 +1,18 @@
 import { readFileSync } from 'fs'
 import chalk from 'chalk'
 
-import actions from './actions.js'
+import { getPkgManager } from './actions.js'
 
 const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url)))
-const { name, version } = pkg
 
-const registries = JSON.parse(readFileSync(new URL('./registries.json', import.meta.url)))
+export let { name, description, version } = pkg
 
-export default {
-  name: chalk.cyan(name),
-  description: `${actions.getPkgManager('NPM')} ${actions.getPkgManager('YARN')} ${actions.getPkgManager(
-    'PNPM'
-  )} ${chalk.green('registry manager')}`,
-  version: chalk.magenta(version),
-  registries
-}
+name = chalk.cyan(name)
+
+description = `${getPkgManager('NPM')} ${getPkgManager('YARN')} ${getPkgManager('PNPM')} ${chalk.green(
+  'registry manager'
+)}`
+
+version = chalk.magenta(version)
+
+export const registries = JSON.parse(readFileSync(new URL('./registries.json', import.meta.url)))

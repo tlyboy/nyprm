@@ -35,6 +35,10 @@ npm install nyprm
 import nyprm from 'nyprm'
 ```
 
+```javascript
+import * as nyprm from 'nyprm'
+```
+
 ## 相关仓库
 
 - [npm](https://github.com/npm/cli) — the package manager for JavaScript
