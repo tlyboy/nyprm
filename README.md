@@ -27,10 +27,6 @@ Commands:
   help [command]  display help for command
 ```
 
-```bash
-npm install nyprm
-```
-
 ## 相关仓库
 
 - [npm](https://github.com/npm/cli) — the package manager for JavaScript
