@@ -1,6 +1,6 @@
 {
   "name": "nyprm",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "NPM YARN PNPM 镜像管理工具",
   "keywords": [
     "npm",
@@ -17,7 +17,6 @@
   "license": "MIT",
   "author": "Guany",
   "type": "module",
-  "main": "main.js",
   "bin": "./cli.js",
   "scripts": {
     "format": "prettier --write ."

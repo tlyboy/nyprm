@@ -4,8 +4,8 @@ import { Command } from 'commander'
 import chalk from 'chalk'
 import { execaCommandSync } from 'execa'
 
-import { name, description, version, registries } from './data.js'
-import { getPkgManager, init, setConfig, getConfig } from './methods.js'
+import { name, description, version, registries } from './constants.js'
+import { getPkgManager, init, setConfig, getConfig } from './actions.js'
 
 const program = new Command()
 
@@ -16,11 +16,8 @@ program
   .description('add registry mirror and binary mirror')
   .action(() => {
     init('npm', registries.npmmirror)
-
     execaCommandSync('npm install -g npm yarn pnpm', { stdio: 'inherit' })
-
     setConfig('yarn', '-- --emoji', 'true')
-
     init('yarn', registries.npmmirror)
   })
 
